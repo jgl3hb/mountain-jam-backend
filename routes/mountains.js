@@ -7,6 +7,9 @@ const router = Router()
 router.get('/', mountainsCtrl.index)
 router.get('/:id', mountainsCtrl.show)
 
+//Protected Routes
+router.post('/', checkAuth, mountainsCtrl.create)
+
 
 export {
   router
