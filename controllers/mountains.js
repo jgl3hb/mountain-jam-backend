@@ -1,4 +1,4 @@
-import { Mountain } from "../models/mountain";
+import { Mountain } from "../models/mountain.js";
 
 function index (req, res) {
   Mountain.find({})
