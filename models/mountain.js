@@ -7,7 +7,7 @@ const mountainSchema = new Schema({
   latitude: Number,
   longitude: Number,
   elevation: Number,
-  country: [String],
+  countries: [String],
   range: String,
   comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}],
 }, {
