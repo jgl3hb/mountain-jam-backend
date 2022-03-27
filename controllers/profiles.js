@@ -8,5 +8,11 @@ function index(req, res) {
     res.status(500).json(err)
   })
 }
+function show(req, res){
+  console.log("It Works!!!!")
+}
 
-export { index }
+export { 
+  index,
+  show 
+}
