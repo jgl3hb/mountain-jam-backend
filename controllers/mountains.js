@@ -48,6 +48,7 @@ function create(req, res) {
 }
 
 function deleteMountain(req, res) {
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   Mountain.findByIdAndDelete(req.params.id)
   .then(mountain => res.json(mountain))
   .catch(err => res.json(err))

@@ -13,6 +13,7 @@ router.post('/', checkAuth, mountainsCtrl.create)
 router.put('/:id', checkAuth, mountainsCtrl.update)
 router.delete('/:id', checkAuth, mountainsCtrl.delete)
 
+
 export {
   router
 }
