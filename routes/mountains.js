@@ -10,7 +10,7 @@ router.get('/:id', mountainsCtrl.show)
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, mountainsCtrl.create)
-router.put('/:id', checkAuth, mountainssCtrl.update)
+router.put('/:id', checkAuth, mountainsCtrl.update)
 router.delete('/:id', checkAuth, mountainsCtrl.delete)
 
 export {
