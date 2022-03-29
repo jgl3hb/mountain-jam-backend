@@ -94,10 +94,33 @@ function show(req, res) {
   .catch(err => res.json(err))
 }
 
+function createComment(req, res) {
+  Mountain.findById(req.params.id)
+  .populate('creator')
+  .then(mountain => {
+    mountain.comment.push(req.body)
+    mountain.save()
+    .then(() => {
+      res.json(mmountain)
+    })
+    .catch(err => {
+      res.json(err)
+    })
+  })
+}
+
+function deleteComment(req, res) {
+  Comment.findByIdAndDelete(req.params.id)
+  .then(comment => res.json(comment))
+  .catch(err => res.json(err))
+}
+
 export {
   index, 
   show,
   create,
   update,
   deleteMountain as delete,
+  createComment,
+  deleteComment,
 }
