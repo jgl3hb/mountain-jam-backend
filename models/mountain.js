@@ -9,7 +9,10 @@ const commentSchema = new Schema({
       return new Date().toLocaleString().split(',')[0]
     }
   },
-  comment: String,
+  comment: {
+    type: String,
+    required: true,
+  },
   owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   photo: {type: String},
 }, {
@@ -26,7 +29,7 @@ const mountainSchema = new Schema({
   range: String,
   owner: {type: mongoose.Schema.Types.ObjectId, ref: "Profile"},
   photo: {type: String},
-  comments: [{type: Schema.Types.ObjectId, ref: 'Comment'}],
+  comments: [commentSchema],
 }, {
   timestamps: true
 })
