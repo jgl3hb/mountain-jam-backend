@@ -4,6 +4,7 @@ import fetch from "node-fetch";
 
 const db = mongoose.connection
 
+mongoose.connect('')
 
 db.on('connected', function () {
   console.log(`Connected to MongoDB ${db.name} for seeding at ${db.host}:${db.port}`)
