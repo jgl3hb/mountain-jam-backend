@@ -96,15 +96,19 @@ function show(req, res) {
 
 function createComment(req, res) {
   req.body.owner = req.user.profile
+  // delete req.body.visitDate
   Mountain.findById(req.params.id)
   .populate('owner')
   .then(mountain => {
-    mountain.comment.push(req.body)
+    mountain.comments.push(req.body)
+    console.log('line 103', mountain)
     mountain.save()
-    .then(() => {
-      res.json(mmountain)
+    .then((mountain) => {
+      console.log('line107', mountain)
+      res.json(mountain)
     })
     .catch(err => {
+      console.log('err', err)
       res.json(err)
     })
   })
