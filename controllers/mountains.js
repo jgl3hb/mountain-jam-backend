@@ -48,7 +48,6 @@ function create(req, res) {
 }
 
 function deleteMountain(req, res) {
-  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
   Mountain.findByIdAndDelete(req.params.id)
   .then(mountain => res.json(mountain))
   .catch(err => res.json(err))
@@ -95,10 +94,38 @@ function show(req, res) {
   .catch(err => res.json(err))
 }
 
+function createComment(req, res) {
+  req.body.owner = req.user.profile
+  // delete req.body.visitDate
+  Mountain.findById(req.params.id)
+  .populate('owner')
+  .then(mountain => {
+    mountain.comments.push(req.body)
+    console.log('line 103', mountain)
+    mountain.save()
+    .then((mountain) => {
+      console.log('line107', mountain)
+      res.json(mountain)
+    })
+    .catch(err => {
+      console.log('err', err)
+      res.json(err)
+    })
+  })
+}
+
+function deleteComment(req, res) {
+  Comment.findByIdAndDelete(req.params.id)
+  .then(comment => res.json(comment))
+  .catch(err => res.json(err))
+}
+
 export {
   index, 
   show,
   create,
   update,
   deleteMountain as delete,
+  createComment,
+  deleteComment,
 }
