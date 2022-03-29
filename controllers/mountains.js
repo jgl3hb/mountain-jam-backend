@@ -95,8 +95,9 @@ function show(req, res) {
 }
 
 function createComment(req, res) {
+  req.body.owner = req.user.profile
   Mountain.findById(req.params.id)
-  .populate('creator')
+  .populate('owner')
   .then(mountain => {
     mountain.comment.push(req.body)
     mountain.save()
