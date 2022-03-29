@@ -9,6 +9,8 @@ router.get('/:id', mountainsCtrl.show)
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
+router.post('/comment', checkAuth, mountainsCtrl.createComment)
+router.delete('/comment/:id', checkAuth, mountainsCtrl.deleteComment)
 router.post('/', checkAuth, mountainsCtrl.create)
 router.put('/:id', checkAuth, mountainsCtrl.update)
 router.delete('/:id', checkAuth, mountainsCtrl.delete)
