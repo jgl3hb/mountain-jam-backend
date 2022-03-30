@@ -8,12 +8,30 @@ function index(req, res) {
     res.status(500).json(err)
   })
 }
+
+function addPeak(req, res){
+  Profile.findById(req.user.profile)
+  .then(profile => {
+    profile.toVisit.push(req.body)
+    profile.save()
+    .then(updatedProfile => {
+      res.json(updatedProfile)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
+}
+
+
 function show(req, res){
   console.log("It Works!!!!")
 }
 
 export { 
   index,
-  show 
+  show,
+  addPeak 
 }
 

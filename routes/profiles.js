@@ -11,5 +11,6 @@ const router = Router()
 router.use(decodeUserFromToken)
 router.get('/', checkAuth, profilesCtrl.index)
 router.get('/profile',checkAuth, profilesCtrl.show)
+router.post('/addPeak', checkAuth, profilesCtrl.addPeak)
 
 export { router }
