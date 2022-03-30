@@ -88,6 +88,12 @@ function update(req, res) {
   }
 }
 
+function search(req, res) {
+  Mountain.find({"name":{"$regex":req.params.search, "$options":"i"}})
+  .then(mountains => res.json(mountains))
+  .catch(err => res.json(err))
+}
+
 function show(req, res) {
   Mountain.findById(req.params.id)
   .then(mountain => res.json(mountain))
@@ -128,4 +134,5 @@ export {
   deleteMountain as delete,
   createComment,
   deleteComment,
+  search,
 }
