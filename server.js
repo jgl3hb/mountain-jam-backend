@@ -3,7 +3,7 @@ import express from 'express'
 import logger from 'morgan'
 import cors from 'cors'
 import formData from 'express-form-data'
-
+import {v2 as cloudinary} from 'cloudinary'
 import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as mountainsRouter } from './routes/mountains.js'
