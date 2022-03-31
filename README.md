@@ -1,71 +1,36 @@
-# Decoupled MERN Stack with JWT Auth Template - Back End
+Mountain Jam Logo
 
-This is the back end of a decoupled MERN Stack app that includes JWT Authentication.
+Visit our Site: 
+https://mountain-jam.herokuapp.com/
 
-When combined with the front end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end), you'll have all you need to build a full stack MERN app!
+Technologies used:
 
-Use this to go build things! 🚀
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) 
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) 
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) 
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) 
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-white?style=for-the-badge&logo=bootstrap)
+![React](https://img.shields.io/badge/-React-white?style=for-the-badge&logo=React&logoColor=blue)
+![Heroku](https://img.shields.io/badge/-Heroku-white?style=for-the-badge&logo=heroku&logoColor=black)
 
-## To Use This Template
 
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
+Objective:
+To make a React application that implements an API with a list of mountains in the world. We'll be able to keep track of mountains we have climbed or want to climb in the future. 
 
-```bash
-git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end <name-of-your-app-here>-back-end
-cd <name-of-your-app-here>-back-end
-```
+We'll also be able to make notes about our hikes for future reference. 
 
-Once you are in the project directory:
+Entity Relationship Document
 
-```bash
-rm -rf .git
-```
+<img src="https://trello.com/1/cards/623a58e086fa6585d3352e4b/attachments/623a58e086fa6585d3352e5e/download/Capture.PNG"  width="720" height="480">
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+Wireframe
 
-Re-initialize a git repository:
+<img src="https://whimsical.com/mountain-jam-QPSdk91kB6eoNP3HbTv47B"  width="720" height="480">
 
-```bash
-git init
-```
-
-Use the GitHub CLI to create a new project repository on GitHub:
-
-```bash
-gh repo create <name-of-your-app-here>-back-end
-```
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL` and `SECRET` with values that you provide.
-
-> 🚨 Place secrets in this `.env` file. The contents of this file WILL NOT be exposed to site visitors.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-You're done!
+Ice Box:
