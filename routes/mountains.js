@@ -6,7 +6,6 @@ const router = Router()
 // Public Routes
 router.get('/', mountainsCtrl.index)
 router.get('/:id', mountainsCtrl.show)
-router.get('/search/:search', mountainsCtrl.search)
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
