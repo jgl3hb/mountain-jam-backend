@@ -88,12 +88,6 @@ function update(req, res) {
   }
 }
 
-function search(req, res) {
-  Mountain.find({"name":{"$regex":req.params.search, "$options":"i"}})
-  .then(mountains => res.json(mountains))
-  .catch(err => res.json(err))
-}
-
 function show(req, res) {
   Mountain.findById(req.params.id)
   .then(mountain => res.json(mountain))
@@ -102,12 +96,10 @@ function show(req, res) {
 
 function createComment(req, res) {
   req.body.owner = req.user.profile
-  // delete req.body.visitDate
   Mountain.findById(req.params.id)
   .populate('owner')
   .then(mountain => {
     mountain.comments.push(req.body)
-    console.log('line 103', mountain)
     mountain.save()
     .then((mountain) => {
       console.log('line107', mountain)
@@ -134,5 +126,4 @@ export {
   deleteMountain as delete,
   createComment,
   deleteComment,
-  search,
 }
