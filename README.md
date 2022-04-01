@@ -1,4 +1,4 @@
-Mountain Jam Logo
+![](https://i.imgur.com/QZ4Skmp.png)
 
 Visit our Site: 
 https://mountain-jam.herokuapp.com/
@@ -34,3 +34,9 @@ Wireframe
 <img src="https://whimsical.com/mountain-jam-QPSdk91kB6eoNP3HbTv47B"  width="720" height="480">
 
 Ice Box:
+- Implement an API that displays airports closest to a mountain
+- Allow users to plan a trip by connecting mountains and airports
+- Curated page views e.g. Tallest mountains, Colorado 14ers, etc. 
+- Add an activity feed to view recent updates
+- Implement Google Maps API to display peak locations
+- Allow users to create mountains/comments not viewable to others
