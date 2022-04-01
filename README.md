@@ -1,7 +1,7 @@
 ![](https://i.imgur.com/QZ4Skmp.png)
 
-Visit our Site: 
-https://mountain-jam.herokuapp.com/
+Visit our Site: [Mountain Jam](https://mountain-jam.herokuapp.com/)
+
 
 Technologies used:
 
@@ -17,6 +17,7 @@ Technologies used:
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-white?style=for-the-badge&logo=bootstrap)
 ![React](https://img.shields.io/badge/-React-white?style=for-the-badge&logo=React&logoColor=blue)
 ![Heroku](https://img.shields.io/badge/-Heroku-white?style=for-the-badge&logo=heroku&logoColor=black)
+![Cloudinary](https://img.shields.io/badge/-Cloudinary-white?style=for-the-badge&logo=cloudinary&logoColor=black)
 
 
 Objective:
@@ -31,7 +32,7 @@ Entity Relationship Document
 
 Wireframe
 
-<img src="https://whimsical.com/mountain-jam-QPSdk91kB6eoNP3HbTv47B"  width="720" height="480">
+<img src="https://i.imgur.com/x5PweOr.png"  width="720" height="480">
 
 Ice Box:
 - Implement an API that displays airports closest to a mountain
